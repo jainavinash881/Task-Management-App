@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="masthead">
+        <div class="boards-menu"></div>
+        <div class="logo">
+            <h1><i class="fab fa-trello logo-icon" aria-hidden="true"></i>Trello</h1>
+        </div>
+    </header>
+    <section class="signup-login">
+        <form action="/Authenticate" method="POST">
+            <div class="username">
+                <input type="email" placeholder="Email" name="email"></input>
+            </div>
+            <div class="username">
+                <input type="password" placeholder="Password" name="password"></input>
+            </div>
+            <div class="button-signup-login">
+                <button class="add-card-btn btn" type="submit" onclick="click()">Log In</button>
+                <a href="index.html">New user?</a>
+            </div>
+
+        </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/public/script.js"></script>
+
+</body>
+
+</html>

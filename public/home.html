@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trello</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="boards-menu">
+            <div class="board-search">
+                <input type="search" class="board-search-input" aria-label="Board Search">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="logo">
+            <h1><i class="fab fa-trello logo-icon" aria-hidden="true"></i>Trello</h1>
+        </div>
+        <div class="setting-class">
+            <a onclick="profile()">
+                <h2 style="color: aliceblue;margin-right: 20px;" id="Uname"> </h2>
+            </a>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </header>
+    <!-- Lists container -->
+
+    <section class="lists-container">
+        <div class="list" id="dragabble_card">
+            <h3 class="list-title">Tasks</h3>
+            <div class="card_data" id="card-data"></div>
+            <ul class="list-items" id="parent_1">
+                <form action="/tasks" method="POST">
+                    <li id="editableLi">
+                        <input name="card_name" type="text" id="textboxId" class="input_style" />
+                    </li>
+                </form>
+
+            </ul>
+            <button class="add-card-btn btn" onclick="createEditableLi('parent_1')">Add a card</button>
+        </div>
+        <div class="list" id="dragabble_card">
+            <h3 class="list-title">Pending Tasks</h3>
+            <div class="card_data" id="card-data1"></div>
+            <ul class="list-items" id="parent_2">
+                <form action="/pending_tasks" method="POST">
+                    <li id="editableLi">
+                        <input name="card_name" type="text" id="textboxId" class="input_style" />
+                    </li>
+                </form>
+            </ul>
+            <button class="add-card-btn btn" onclick="createEditableLi('parent_2')">Add a card</button>
+        </div>
+        <div class="list" id="dragabble_card">
+            <h3 class="list-title">Completed Tasks</h3>
+            <div class="card_data" id="card-data2"></div>
+            <ul class="list-items" id="parent_3">
+                <form action="/completed" method="POST">
+                    <li id="editableLi">
+                        <input name="card_name" type="text" id="textboxId" class="input_style" /> </li>
+                </form>
+            </ul>
+            <button class="add-card-btn btn" onclick="createEditableLi('parent_3')">Add a card</button>
+        </div>
+    </section>
+    <script>
+        function logout() {
+            window.location.href = "/login.html"
+            document.cookie = "Auth=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            document.cookie = "UName=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+        }
+        function profile() {
+            window.location.href = "/profile.html"
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

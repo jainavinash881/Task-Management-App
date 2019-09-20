@@ -1,0 +1,44 @@
+.signup-login {
+    margin: 10% 35% 0 35%;
+    border: solid 5px #0067a3
+}
+
+.signup-login input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 85%;
+    padding-bottom: 5px;
+    margin-bottom: 13px;
+    margin-top: 20px;
+    margin-right: 7px;
+    margin-left: 30px;
+    height: 35px;
+    font-size: 23px;
+    outline-color: #fff;
+    color: #0067a3;
+}
+
+::placeholder {
+    color: #0067a3
+}
+
+.signup-login input:focus {
+    border-bottom-color: #0067a3;
+}
+
+.signup-login button {
+    float: right;
+    background: #0067a3;
+    margin-right: 35px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.button-signup-login a {
+    margin-left: 30px;
+    cursor: pointer;
+    color: #0067a3;
+    font-size: 20px;
+    text-decoration: none;
+}
