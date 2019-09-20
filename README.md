@@ -1,6 +1,6 @@
 # Task-Management-App
-Task management app similar to trello which maintains card lanes in which user can change the status of the card as per need, to create this web app i used JavaScript, HTML5, css3, Nodejs as a server and MYSQl as a database.Cards are dragabble and Dropabble with vanillajavascript
-
+Task management app similar to trello which maintains card lanes in which user can change the status of the card as per need, to create this web app i used JavaScript, HTML5, css3, Nodejs as a server and MYSQl as a database.Cards are dragabble and Dropabble with vanillajavascript<br>
+For Authentiaction i used JWT tokens to verify the user without hitting server to authorise again and again for acessibility
 # Screenshots
 
 ![alt-tag](https://user-images.githubusercontent.com/22345839/65344720-0ee77b80-dbf6-11e9-86e9-893a27114b8d.png)
